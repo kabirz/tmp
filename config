@@ -1,0 +1,21 @@
+[init]
+	defaultBranch = master
+[user]
+        name = "kabirz"
+        email = "jxwazxzhp@126.com"
+
+[alias]
+        st = status
+        co = checkout
+        ci = commit
+        br = branch
+
+[credential "https://github.com.cnpmjs.org"]
+        username = kabirz
+        helper = store
+
+[url "https://github.com.cnpmjs.org/"]
+	InsteadOf = https://github.com/
+
+# [url "https://github.com/"]
+#  pushInsteadOf = https://github.com.cnpmjs.org/
