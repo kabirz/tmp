@@ -2,15 +2,16 @@
 
 [简历模板工具](https://rxresu.me/)
 
- ```mermaid
+```mermaid
 flowchat
-st=>start: 开始
-e=>end: 结束
-op=>operation: 操作
-sub1=>subroutine: 子程序
-cond=>condition: Yes or No?
-io=>inputoutput: 输入/输出
-st->op->cond
-cond(yes)->io->e
-cond(no)->sub1(right)->op
+st=>start: 生产者线程进入 :>https://blog.csdn.net/qq_21808961
+op1=>operation: 设置Info类的名称和内容
+op2=>operation: 修改标志位
+op3=>operation: 等待线程唤醒
+op4=>operation: 等待消费者取走
+cond=>condition: 判断标志位
+
+st(right)->cond->op1->op2->op3
+cond(yes,right)->op1
+cond(no)->op4
 ```
